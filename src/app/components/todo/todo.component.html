@@ -1,1 +1,5 @@
-<p>todo works!</p>
+
+
+<div *ngFor="let elem of TodoArr" >
+    <app-todolist [Todo]="elem"></app-todolist>
+</div>
