@@ -16,6 +16,7 @@ export class TodolistComponent implements OnInit {
   }
 
   onDelete(Todo:TodoInterface){
+    this.TodoDelete.emit(Todo)
     console.log("on delete has clicked")
   }
 }

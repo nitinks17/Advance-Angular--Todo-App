@@ -30,4 +30,9 @@ export class TodoComponent implements OnInit {
     ]
   }
 
+  deleteTodoelem(item:TodoInterface){
+    const index=this.TodoArr.indexOf(item)
+    this.TodoArr.splice(index,1)
+    console.log("item",item)
+  }
 }

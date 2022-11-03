@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    TodolistComponent
+    TodolistComponent,
+    AddTodoComponent
     
   ],
   imports: [
