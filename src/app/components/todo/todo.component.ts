@@ -8,11 +8,11 @@ import { TodoInterface } from './todointerface';
 })
 export class TodoComponent implements OnInit {
 
-  TodoArr:TodoInterface[]=[]
+  todoArr:TodoInterface[]=[]
   constructor() { }
 
   ngOnInit(): void {
-    this.TodoArr=[
+    this.todoArr=[
       {
         sno:1,
         title:"jogging",
@@ -31,14 +31,14 @@ export class TodoComponent implements OnInit {
   }
 
   deleteTodoelem(item:TodoInterface){
-    const index=this.TodoArr.indexOf(item)
-    this.TodoArr.splice(index,1)
+    const index=this.todoArr.indexOf(item)
+    this.todoArr.splice(index,1)
     console.log("item",item)
  
   }
 
   addTodo(addedtodo:TodoInterface){
     console.log("addedtodo",addedtodo)
-this.TodoArr.push(addedtodo)
+this.todoArr.push(addedtodo)
   }
 }
