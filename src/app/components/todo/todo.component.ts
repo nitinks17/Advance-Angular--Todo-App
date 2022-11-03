@@ -34,5 +34,10 @@ export class TodoComponent implements OnInit {
     const index=this.TodoArr.indexOf(item)
     this.TodoArr.splice(index,1)
     console.log("item",item)
+ 
+  }
+
+  addTodo(addedtodo:TodoInterface){
+this.TodoArr.push(addedtodo)
   }
 }

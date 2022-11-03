@@ -1,5 +1,5 @@
 
-<app-add-todo></app-add-todo>
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
 <div *ngFor="let elem of TodoArr" >
     <app-todolist [Todo]="elem" (TodoDelete)="deleteTodoelem($event)"></app-todolist>
 </div>
