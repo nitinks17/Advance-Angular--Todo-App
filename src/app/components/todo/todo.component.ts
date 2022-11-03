@@ -38,6 +38,7 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(addedtodo:TodoInterface){
+    console.log("addedtodo",addedtodo)
 this.TodoArr.push(addedtodo)
   }
 }
