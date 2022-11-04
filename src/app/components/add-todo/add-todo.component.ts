@@ -21,6 +21,13 @@ desc:string=""
       description:this.desc,
       active:true
     }
-this.todoAdd.emit(todoelem)
+    if(this.title=="" || this.desc==""){
+      alert("title & desciption should always be filled,neither of them cant be empty")
+    }
+   
+    else{
+      this.todoAdd.emit(todoelem)
+    }
+
   }
 }

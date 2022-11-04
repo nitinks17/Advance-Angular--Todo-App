@@ -34,6 +34,7 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(addedtodo:TodoInterface){
+    
 console.log("addedtodo",addedtodo);
 let samename=addedtodo.title;
 let check=this.todoArr.some(checkifexists)
