@@ -7,6 +7,7 @@ import { TodoInterface } from './todointerface';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
+  alertifsame:boolean=false;
   localItem:any;
   todoArr:TodoInterface[]=[]
   constructor() { 
@@ -33,9 +34,23 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(addedtodo:TodoInterface){
-console.log("addedtodo",addedtodo)
-this.todoArr.push(addedtodo)
-localStorage.setItem("todosElements",JSON.stringify(this.todoArr))
+console.log("addedtodo",addedtodo);
+let samename=addedtodo.title;
+let check=this.todoArr.some(checkifexists)
+
+function checkifexists(elem:any){
+  return elem.title===samename
+}
+console.log("check",check)
+console.log("all arr",this.todoArr)
+if(!check){
+  this.todoArr.push(addedtodo)
+  localStorage.setItem("todosElements",JSON.stringify(this.todoArr))
+}
+else{
+  alert("Task already exists,please add different task")
+}
+
   }
 
   toggleCheckbox(checkeddata:TodoInterface){
