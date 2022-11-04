@@ -5,6 +5,6 @@
 
 <ng-template #elseBlock>
 <div *ngFor="let elem of todoArr" #elseBlock >
-    <app-todolist [Todo]="elem" (TodoDelete)="deleteTodoelem($event)"></app-todolist>
+    <app-todolist [Todo]="elem" (TodoDelete)="deleteTodoelem($event)" (TodoCheck)="toggleCheckbox($event)"></app-todolist>
 </div>
 </ng-template>

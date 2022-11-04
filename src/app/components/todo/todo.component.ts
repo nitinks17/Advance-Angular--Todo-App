@@ -33,10 +33,17 @@ export class TodoComponent implements OnInit {
   }
 
   addTodo(addedtodo:TodoInterface){
-  
-
 console.log("addedtodo",addedtodo)
 this.todoArr.push(addedtodo)
 localStorage.setItem("todosElements",JSON.stringify(this.todoArr))
+  }
+
+  toggleCheckbox(checkeddata:TodoInterface){
+    console.log("ddd",checkeddata)
+    const index=this.todoArr.indexOf(checkeddata)
+    console.log("i",index)
+    this.todoArr[index].active=!this.todoArr[index].active
+    localStorage.setItem("todosElements",JSON.stringify(this.todoArr))
+
   }
 }
