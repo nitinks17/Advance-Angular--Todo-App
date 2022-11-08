@@ -19,10 +19,11 @@ desc:string=""
       sno:5,
       title:this.title,
       description:this.desc,
-      active:true
+      active:true,
+      time:new Date()
     }
     if(this.title=="" || this.desc==""){
-      alert("title & desciption should always be filled,neither of them cant be empty")
+      alert("Title & Desciption should always be filled,neither of them cant be empty")
     }
    
     else{

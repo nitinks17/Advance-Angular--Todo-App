@@ -2,12 +2,17 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://media.istockphoto.com/photos/tablet-with-paper-clip-todo-list-3d-illustration-3d-rendering-picture-id1285082518?b=1&k=20&m=1285082518&s=170667a&w=0&h=b-ByZ7VS2dnHJRvHUBxdp1qLoeNz_XVBGQK7X8eXgGU=" alt="Logo" width="70" height="44" class="d-inline-block align-text-top">
-        Todo App
+        Todo App          
       </a>
+      <h4>{{timeanddate | date:'mediumDate' }}</h4>
     </div>
   </nav>
 
   <div class="container">
+    <div class="row">
+      <div class="col-6">
     <h1 class="text-center mb-5">ToDo App --Nitin k S</h1>
     <app-todo></app-todo>
+  </div>
+  </div>
   </div>

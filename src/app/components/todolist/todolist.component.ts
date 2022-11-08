@@ -7,13 +7,16 @@ import { TodoInterface } from '../todo/todointerface';
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent implements OnInit {
+ 
 @Input()  Todo:any;
 @Output() TodoDelete:EventEmitter<TodoInterface>=new EventEmitter()
 @Output() TodoCheck:EventEmitter<TodoInterface>=new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
-    console.log("TodoArr",this.Todo)
+    console.log("TodoArr in todolist",this.Todo)
+    
+    
   }
 
   onDelete(Todo:TodoInterface){
